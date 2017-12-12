@@ -11,14 +11,14 @@ sudo firewall-cmd --reload
 
 yum -y update
 
+yum install -y docker
+systemctl enable docker && systemctl start docker
+
 cat << EOF > /etc/docker/daemon.json
 {
   "exec-opts": ["native.cgroupdriver=systemd"]
 }
 EOF
-
-yum install -y docker
-systemctl enable docker && systemctl start docker
 
 cat <<EOF > /etc/yum.repos.d/kubernetes.repo
 [kubernetes]
