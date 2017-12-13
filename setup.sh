@@ -1,6 +1,8 @@
 #!/usr/bin/env bash
 
-# Start with CentOS 7
+# Taken from https://kubernetes.io/docs/setup/independent/create-cluster-kubeadm/
+# start with fresh CentOS 7
+
 firewall-cmd --zone=public --permanent --add-service=https
 firewall-cmd --zone=public --permanent --add-service=http
 firewall-cmd --zone=public --permanent --add-port=6443/tcp

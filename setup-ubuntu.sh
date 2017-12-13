@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 
-
+# Taken from https://kubernetes.io/docs/setup/independent/create-cluster-kubeadm/
+# start with fresh Ubuntu 16.04.x
 
 apt-get update
 apt-get install -y docker.io
